@@ -39,7 +39,7 @@
                     <archive>
                         <manifest>
                             <!-- 这里放置插件的入口函数，注意修改包名，其他的不用动 -->
-                            <mainClass>plugins.PluginDemo.Main</mainClass>
+                            <mainClass>runTest.Main</mainClass>
                         </manifest>
                     </archive>
                     <!-- 这个jar-with-dependencies是这个插件中预置的，不用管它，尽管用就好了 -->
