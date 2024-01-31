@@ -1,4 +1,4 @@
-package Internet;
+package Core.Internet;
 
 import Config.GlobalConfig;
 import Type.ProxyType;
@@ -19,13 +19,14 @@ import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 import java.util.List;
 
-public class ProxyInternet {
+public class ProxyInternet implements InternetClient{
     /**
      * 此方法仅用于设置代理
      * @param type
      * @param proxyType
      * @return
      */
+    @Override
     public OkHttpClient newProxy(Proxy.Type type, ProxyType proxyType) {
 
         // 创建自定义的 TrustManager，信任所有证书
@@ -82,6 +83,7 @@ public class ProxyInternet {
      * 程序内用到的所有 http 请求，请使用该函数
      * @return OkHttpClient
      */
+    @Override
     public OkHttpClient newClient(){
         if (GlobalConfig.configTypeNow.getProxyType().getStatus().equals("启用")){
             Proxy.Type type = Proxy.Type.SOCKS;

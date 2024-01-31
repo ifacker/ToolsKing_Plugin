@@ -1,6 +1,6 @@
 package plugins.PluginDemo;
 
-import Internet.ProxyInternet;
+import Core.Internet.ProxyInternet;
 import Plugin.Plugin;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
